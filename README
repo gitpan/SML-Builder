@@ -1,0 +1,20 @@
+NAME
+
+    SML::Builder - Content::Builder using SIMPLIFIED MARKUP LANGUAGE
+
+     $Revision: 1.1 $
+     $Date: 2004/05/19 19:49:28 $
+
+METHODS
+
+    new
+         $sml = SML::Builder->new();
+ 
+    build ( [ \@items ] )
+        Build back the sml text from parsed sml items.
+
+    build_item ( $item )
+        Build single item.
+
+TODO
+

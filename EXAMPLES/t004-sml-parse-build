@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+	use strict;
+	use warnings;
+	use Data::Dump qw(pp);
+	use	SML::Parser;
+	use	SML::Builder;
+	
+	print "START\n";
+	
+	my	$source_filename	= 'data.sml';
+	my	$source_text		= qx{cat $source_filename};
+	
+	my	$sml				= SML::Parser->parse( $source_text );
+
+	print "PARSED\n";
+
+	print SML::Builder->build( $sml );
